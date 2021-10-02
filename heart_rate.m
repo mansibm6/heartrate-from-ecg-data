@@ -37,9 +37,9 @@ axis tight
 ylabel('ECG', 'fontsize', 16)
 
 subplot(212)
-plot(time(pos_peaks(2:end)),60/(diff(pos_peaks/200))); % total number of peaks in 200*60 samples (1 minute = 60s = 60*200 samples)
+plot(time(pos_peaks(2:end)),60/(diff(pos_peaks/200))); 
 axis tight
-x = 60/diff(pos_peaks/200);
+x = 60/diff(pos_peaks/200); % diff returns an arry of differences between consecutive elements of pos_peaks/200
 grid on
 axis tight
 ylabel('Heart Rate', 'fontsize', 16)
